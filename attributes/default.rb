@@ -53,4 +53,6 @@ default["cassandra"]["repos"] = {
     }
 }
 
+default["cassandra"]["open_ports"] = [22, 7000, 7001, 8081]
+
 # vim:et:fdm=marker:sts=4:sw=4:ts=4:
