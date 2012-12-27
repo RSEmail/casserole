@@ -5,9 +5,10 @@ describe "casserole::default" do
 
     before(:each) do
         chef_run.node.automatic_attrs["platform_family"] = "rhel"
-        %w{java casserole::repos casserole::packages}.each do |r|
+        %w{java iptables casserole::repos casserole::packages}.each do |r|
             chef_run.node.run_state.seen_recipes[r] = true
         end
+        Chef::Recipe.any_instance.stub(:iptables_rule) {}
     end
 
     it "should install Oracle Java" do

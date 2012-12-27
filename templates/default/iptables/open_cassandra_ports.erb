@@ -1,0 +1,1 @@
+-A <%= @iptables_chain %> -p tcp -m multiport --dports <%= @ports.join(',') %> -m state --state NEW -j ACCEPT

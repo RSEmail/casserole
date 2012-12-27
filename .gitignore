@@ -1,5 +1,6 @@
 # Ignore .swp files
 *.swp
+*~
 
 # Ignore Vagrant temp files
 .vagrant

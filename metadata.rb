@@ -9,6 +9,7 @@ version             "0.1.0"
 depends             "yum", "= 2.0.2"
 depends             "apt", "= 1.5.0"
 depends             "java", "= 1.6.4"
+depends             "iptables", "= 0.11.0"
 
 supports            "ubuntu", ">= 10.04"
 #supports            "debian", ">= 6.0"

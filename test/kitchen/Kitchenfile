@@ -6,10 +6,16 @@ cookbook "casserole" do
     configuration "repos"
     configuration "packages"
     configuration "configs"
+    configuration "iptables"
 
     # Fail immediately on a Foodcritic check and call ChefSpec before
     # spending the time to spawn test servers
     preflight_command <<-END.gsub(/^\s+/, "")
+        pushd test/kitchen &&
+        librarian-chef clean &&
+        librarian-chef install &&
+        popd &&
+        knife cookbook metadata -o .. casserole &&
         knife cookbook test -o .. casserole &&
         foodcritic -f any . &&
         rspec
