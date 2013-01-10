@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: casserole_test
-# Recipe:: default
+# Recipe:: user
 #
 # Copyright 2012, Jonathan Hartman
 #
@@ -17,6 +17,6 @@
 # limitations under the License.
 #
 
-include_recipe "casserole::default"
+include_recipe "casserole::user"
 
 # vim: ai et ts=2 sts=2 sw=2 ft=ruby fdm=marker
